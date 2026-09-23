@@ -2,7 +2,7 @@
 // config/database.php
 
 $host = 'localhost';
-$dbname = 'ihis_db';
+$dbname = 'rs_db';
 $username = 'root';
 $password = ''; // Sesuaikan dengan password database Anda
 
