@@ -1,0 +1,4 @@
+/* Custom styles outside of Tailwind */
+html, body {
+    height: 100%;
+}

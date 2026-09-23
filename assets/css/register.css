@@ -1,0 +1,68 @@
+.register-container {
+    max-width: 500px;
+    margin: 64px auto;
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.register-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-main);
+}
+
+.register-header p {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 16px;
+}
+
+.register-footer {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.register-footer a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
