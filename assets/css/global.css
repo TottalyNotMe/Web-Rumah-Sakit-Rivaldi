@@ -1,6 +1,6 @@
 /* variables */
 :root {
-    --primary-color: #1d4ed8; /* blue-700 */
+    --primary-color: #0d44dc; /* blue-700 */
     --primary-hover: #2563eb; /* blue-600 */
     --danger-color: #dc2626;  /* red-600 */
     --danger-hover: #ef4444;  /* red-500 */
@@ -77,6 +77,9 @@ a {
 
 .nav-links a:hover {
     background-color: rgba(255,255,255,0.1);
+}
+.nav-link:hover{
+    background-color: rgba(255, 255, 255, 0.395);
 }
 
 .greeting {
