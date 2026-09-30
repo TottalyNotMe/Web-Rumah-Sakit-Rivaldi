@@ -87,16 +87,6 @@ a {
 }
 
 /* Buttons */
-.btn {
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border: none;
-    display: inline-block;
-}
 
 .btn-primary { background-color: var(--primary-hover); color: var(--white); }
 .btn-primary:hover { background-color: #3b82f6; }
@@ -104,7 +94,68 @@ a {
 .btn-danger:hover { background-color: var(--danger-hover); }
 .btn-light { background-color: var(--white); color: var(--primary-color); }
 .btn-light:hover { background-color: #f3f4f6; }
+/* Styling Tombol Dasar (Base Button) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    border: none;
+    /* Membuat sudut melengkung halus (rounded) agar tidak kaku/kotak */
+    border-radius: 12px; 
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
+/* 1. Tombol Utama (Primary Button) - Tema Medis Modern */
+.btn-primary {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(2, 132, 199, 0.3);
+}
+
+/* 2. Tombol Sekunder / Garis Tepi (Outline Button) */
+.btn-outline {
+    background-color: transparent;
+    color: #0284c7;
+    border: 2px solid #0284c7;
+}
+
+.btn-outline:hover {
+    background-color: #0284c7;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(2, 132, 199, 0.25);
+}
+
+/* 3. Tombol Akses Cepat / Fitur Layanan Hospital (Pill Style) */
+.btn-pill {
+    border-radius: 50px;
+    padding: 10px 24px;
+}
+
+/* Efek Fokus untuk Aksesibilitas */
+.btn:focus-visible {
+    outline: 3px solid rgba(2, 132, 199, 0.4);
+    outline-offset: 2px;
+}
 /* Main Content */
 .main-content {
     flex-grow: 1;

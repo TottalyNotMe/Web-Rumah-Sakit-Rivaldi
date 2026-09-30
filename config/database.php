@@ -2,10 +2,9 @@
 // config/database.php
 
 $host = 'localhost';
-$dbname = 'rs_db';
-$username = 'root';
-$password = ''; // Sesuaikan dengan password database Anda
-
+$dbname = 'u245817713_RumahSakit_V';
+$username = 'u245817713_admin_rs';
+$password = 'RumahSakit1234!@';
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
     // Set the PDO error mode to exception
