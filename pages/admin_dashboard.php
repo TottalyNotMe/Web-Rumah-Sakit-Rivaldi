@@ -18,9 +18,18 @@ $occupied_rooms = $stmt->fetchColumn();
 $bor = $total_rooms > 0 ? round(($occupied_rooms / $total_rooms) * 100) : 0;
 ?>
 <div class="container page-wrapper">
-    <div class="page-header">
-        <h2>Hospital Management Dashboard</h2>
-        <p>Selamat datang, Administrator.</p>
+    <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <div>
+            <h2>Hospital Management Dashboard</h2>
+            <p>Selamat datang, Administrator Sistem.</p>
+        </div>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="index.php?page=admin_users" class="btn btn-light" style="font-size: 13px;"><i class="fa-solid fa-users-gear"></i> Kelola User</a>
+            <a href="index.php?page=admin_patients" class="btn btn-light" style="font-size: 13px;"><i class="fa-solid fa-hospital-user"></i> Kelola Pasien</a>
+            <a href="index.php?page=admin_doctors" class="btn btn-light" style="font-size: 13px;"><i class="fa-solid fa-user-doctor"></i> Kelola Dokter</a>
+            <a href="index.php?page=admin_poly" class="btn btn-light" style="font-size: 13px;"><i class="fa-solid fa-clinic-medical"></i> Kelola Poliklinik</a>
+            <a href="index.php?page=queue_management" class="btn btn-primary" style="font-size: 13px;"><i class="fa-solid fa-list-check"></i> Monitor Antrean</a>
+        </div>
     </div>
     
 <div class="card-grid" style="margin-bottom:30px;">

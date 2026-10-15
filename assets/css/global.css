@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    max-w-width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     width: 100%;
@@ -50,13 +50,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 64px;
+    min-height: 64px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .navbar-left, .navbar-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 .brand {

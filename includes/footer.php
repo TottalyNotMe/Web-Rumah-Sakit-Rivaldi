@@ -21,7 +21,7 @@
                 <ul>
                     <li><a href="index.php?page=about">Tentang Kami</a></li>
                     <li><a href="index.php?page=articles">Artikel Kesehatan</a></li>
-                    <li><a href="index.php?page=contact">Karir</a></li>
+                    <li><a href="index.php?page=careers">Karir</a></li>
                     <li><a href="index.php?page=contact">Kontak</a></li>
                 </ul>
             </div>

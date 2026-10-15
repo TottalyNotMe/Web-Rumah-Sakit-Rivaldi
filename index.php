@@ -9,16 +9,18 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 // Validasi page yang diakses untuk mencegah directory traversal
 $allowed_pages = [
     // Public
-    'home', 'about', 'hospitals', 'doctors', 'doctor_profile', 'services', 'promo', 'articles', 'contact', 'faq',
+    'home', 'about', 'hospitals', 'doctors', 'doctor_profile', 'services', 'promo', 'articles', 'contact', 'faq', 'careers', 'infrastructure', // <-- TAMBAHAN DI SINI
     // Auth
     'login', 'register', 'forgot_password', 'logout',
     // Patient Portal
-    'dashboard', 'book_appointment', 'appointments', 'medical_records', 'lab_results', 'billing', 'invoice_detail',
+    'dashboard', 'profile', 'book_appointment', 'appointments', 'medical_records', 'lab_results', 'billing', 'invoice_detail',
+    
     // Doctor
-    'doctor_dashboard', 'doctor_patients', 'doctor_encounter', 'doctor_prescription', 'doctor_lab_request',
+    'doctor_dashboard','doctor_profile', 'doctor_patients', 'doctor_encounter', 'doctor_prescription', 'doctor_lab_request',
+    
     // Admin & Officer
     'admin_dashboard', 'admin_users', 'admin_patients', 'admin_doctors', 'admin_poly', 'admin_schedules', 'admin_rooms', 
-    'officer_dashboard', 'queue_management'
+    'officer_dashboard', 'queue_management', 'admin_infrastructure' // <-- TAMBAHAN DI SINI (Untuk panel admin nanti)
 ];
 if (!in_array($page, $allowed_pages)) {
     $page = 'home';

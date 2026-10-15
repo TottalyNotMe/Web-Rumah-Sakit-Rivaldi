@@ -1,7 +1,7 @@
 <?php
 // config/database.php
 
-$host = 'localhost';
+$host = '127.0.0.1';
 $dbname = 'u245817713_RumahSakit_V';
 $username = 'u245817713_admin_rs';
 $password = 'RumahSakit1234!@';
@@ -16,3 +16,4 @@ try {
     die("Koneksi Database Gagal. Pastikan database '$dbname' sudah dibuat. Error: " . $e->getMessage());
 }
 ?>
+

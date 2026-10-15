@@ -6,6 +6,9 @@ function is_logged_in() {
 }
 
 function get_user_role() {
+    if (isset($_SESSION['role'])) {
+        return $_SESSION['role'];
+    }
     return isset($_SESSION['user_role']) ? $_SESSION['user_role'] : null;
 }
 

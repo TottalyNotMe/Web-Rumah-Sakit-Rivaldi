@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrated Hospital Information System (IHIS)</title>
-    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/css/global.css">
     
@@ -35,7 +35,12 @@
                     <a href="index.php?page=home">Home</a>
                     <a href="index.php?page=services">Layanan</a>
                     <a href="index.php?page=doctors">Dokter</a>
+                    <a href="index.php?page=hospitals">Cabang RS</a>
                     <a href="index.php?page=promo">Promo</a>
+                    <a href="index.php?page=articles">Artikel</a>
+                    <a href="index.php?page=infrastructure">Fasilitas</a>
+                    <a href="index.php?page=careers">Karir</a>
+                    <a href="index.php?page=faq">FAQ</a>
                 </nav>
             </div>
             <div class="navbar-right">

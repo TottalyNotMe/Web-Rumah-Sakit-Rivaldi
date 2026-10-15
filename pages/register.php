@@ -1,6 +1,10 @@
 <?php
+// Pastikan session sudah dinyalakan jika belum ada di file utama
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 $error = '';
-$success = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $nik = trim($_POST['nik']);
@@ -39,7 +43,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                     $stmt->execute([$user_id, $mrn, $nik, $nama]);
 
                     $pdo->commit();
-                    $success = 'Pendaftaran berhasil! Silakan login.';
+
+                    // --- PERUBAHAN DI SINI ---
+                    // Simpan pesan sukses di session dan redirect ke login
+                    $_SESSION['success_message'] = 'Pendaftaran berhasil! Silakan login.';
+                    header("Location: index.php?page=login");
+                    exit();
                 }
             }
         } catch(PDOException $e) {
@@ -59,12 +68,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     <?php if($error): ?>
         <div style="background:#fee2e2; color:#b91c1c; padding:10px; border-radius:4px; margin-bottom:15px; border: 1px solid #f87171;">
             <?= htmlspecialchars($error) ?>
-        </div>
-    <?php endif; ?>
-
-    <?php if($success): ?>
-        <div style="background:#dcfce7; color:#15803d; padding:10px; border-radius:4px; margin-bottom:15px; border: 1px solid #86efac;">
-            <?= htmlspecialchars($success) ?>
         </div>
     <?php endif; ?>
 
